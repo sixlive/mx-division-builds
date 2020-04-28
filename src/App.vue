@@ -226,21 +226,5 @@ $vs-dropdown-bg: #151515;
   border-bottom: 1px solid white;
 }
 
-// .slot-element.mod-slot {
-//   .v-select {
-//     height: 100%;
-//     .vs__dropdown-toggle {
-//       height: 100%;
-//     }
-//   }
-// }
-
-// .mods-slots-container {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-gap: 5px;
-//   .vs__dropdown-menu {
-//     min-width: 385px;
-//   }
-// }
+@import '/style/tooltip.scss';
 </style>

@@ -31,7 +31,7 @@
       <div class="mods-slots-container">
         <template v-for="(mod, i) in modSlots">
           <template v-if="weaponHasThisMod(mod)">
-            <div class="slot-element mod-slot" v-bind:key="i">
+            <div class="slot-element mod-slot" v-bind:key="i" v-tooltip="'suca test'">
               <v-select
                 :placeholder="'Mod Slot: '+ mod"
                 :clearable="false"
@@ -50,24 +50,11 @@
                 </template>
                 <template #selected-option="option">
                   <div class="mod-option-container">
+                    <!-- TODO BETTER UI TO RECOGNIZE ELEMENTS -->
                     <span class="mod-name">{{option.Name}}</span>
-                    <!-- <span class="mod-stat">
-                      <span class="mod-increase" v-if="option.pos">{{option.pos}} +{{option.valPos}}</span>
-                      <span class="mod-decrease" v-if="option.neg">{{option.neg}} {{option.valNeg}}</span>
-                    </span>-->
                   </div>
                 </template>
               </v-select>
-              <span class="mod-stat">
-                <span
-                  class="mod-increase"
-                  v-if="currentWeapon[mod] && currentWeapon[mod].pos"
-                >{{currentWeapon[mod].pos}} +{{currentWeapon[mod].valPos}}</span>
-                <span
-                  class="mod-decrease"
-                  v-if="currentWeapon[mod] && currentWeapon[mod].neg"
-                >{{currentWeapon[mod].neg}} {{currentWeapon[mod].valNeg}}</span>
-              </span>
             </div>
           </template>
         </template>
